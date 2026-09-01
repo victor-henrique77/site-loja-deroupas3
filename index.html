@@ -1,128 +1,61 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stallion - Moda contemporânea com peças elegantes e versáteis. Compre online com fácil navegação." />
-  <title>Stallion — Moda & Estilo Premium</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STALLION — moda country premium com atitude, tradição e acabamento contemporâneo.">
+  <title>STALLION — Country Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container topbar">
-      <a href="#home"><div class="logo">STALLION</div></a>
-      <label class="search" aria-label="Buscar produtos"><input id="search" type="search" placeholder="Buscar por produto, categoria..." autocomplete="off" /><span class="search-icon">🔍</span></label>
-      <div class="actions">
-        <button class="icon-btn" id="favBtn" title="Favoritos" aria-label="Ir para favoritos">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-        </button>
-        <button class="icon-btn cart-btn" id="cartBtn" title="Carrinho" aria-label="Abrir carrinho">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-          <span class="badge" id="cartBadge">0</span>
-        </button>
+  <div class="announcement">ENVIO GRÁTIS PARA PEDIDOS ACIMA DE R$ 299</div>
+  <header class="site-header" id="top">
+    <div class="container header-main">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="brand" href="#home" aria-label="STALLION início">STALLION</a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#home">Início</a><a href="#shop" data-category="Todos">Coleção</a><a href="#shop" data-category="Masculino">Masculino</a><a href="#shop" data-category="Feminino">Feminino</a><a href="#shop" data-category="Acessórios">Acessórios</a><a href="#shop" data-category="Promoções">Ofertas</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg></button>
+        <button class="icon-btn" id="favBtn" aria-label="Favoritos"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.5-8.8 10.2-8.8 10.2S3.2 14.2 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"></path></svg><span class="mini-badge" id="favBadge">0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Abrir carrinho"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"></path></svg><span class="mini-badge" id="cartBadge">0</span></button>
       </div>
     </div>
-    <nav><div class="container nav-inner" id="nav"></div></nav>
+    <div class="search-panel" id="searchPanel"><div class="container"><label for="searchInput">O que você procura?</label><div class="search-field"><input id="searchInput" type="search" placeholder="Camisas, botas, chapéus..." autocomplete="off"><span>⌕</span></div></div></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile"><a href="#home">Início</a><a href="#shop" data-category="Todos">Coleção</a><a href="#shop" data-category="Masculino">Masculino</a><a href="#shop" data-category="Feminino">Feminino</a><a href="#shop" data-category="Acessórios">Acessórios</a><a href="#shop" data-category="Promoções">Ofertas</a></nav>
   </header>
 
-  <div id="home" class="home-section">
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="eyebrow">Nova Coleção 2026</div>
-        <h1>Vista o seu estilo.</h1>
-        <p>Peças contemporâneas para quem transforma atitude em identidade.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="btnShopNow">Comprar agora</button>
-          <button class="btn btn-secondary" id="btnViewCollection">Ver coleção</button>
-        </div>
-      </div>
-      <div class="hero-image"><div class="hero-placeholder"></div></div>
+  <main id="home">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1800&q=85" alt="Moda country contemporânea" class="hero-media">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content"><span class="eyebrow">STALLION / EST. 2026</span><h1>ESTILO QUE<br>CARREGA HISTÓRIA.</h1><p>Moda country para quem vive com personalidade.</p><div class="hero-actions"><a class="btn btn-light" href="#shop" data-category="Todos">Comprar agora</a><a class="btn btn-outline-light" href="#collection">Ver coleção</a></div></div>
+      <div class="hero-note">WESTERN ESSENTIALS<br><strong>01 / 03</strong></div>
     </section>
 
-    <section class="categories-section">
-      <h2>Explore Nossas Categorias</h2>
-      <div class="categories-grid">
-        <div class="category-card" data-category="Masculino"><div class="category-image">👨‍🦱</div><h3>Masculino</h3><p>Estilos modernos e versáteis</p></div>
-        <div class="category-card" data-category="Feminino"><div class="category-image">👩‍🦰</div><h3>Feminino</h3><p>Elegância e sofisticação</p></div>
-        <div class="category-card" data-category="Calçados"><div class="category-image">👟</div><h3>Calçados</h3><p>Conforto e design</p></div>
-        <div class="category-card" data-category="Promoções"><div class="category-image">🎁</div><h3>Promoções</h3><p>Ofertas imperdíveis</p></div>
-      </div>
-    </section>
+    <section class="category-strip container" id="collection"><div class="section-heading"><span>01 — CATEGORIAS</span><h2>Encontre seu jeito.</h2></div><div class="category-grid">
+      <a class="category-card category-wide" href="#shop" data-category="Camisas"><img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1100&q=80" alt="Camisas country"><span>Camisas <b>→</b></span></a>
+      <a class="category-card" href="#shop" data-category="Botas"><img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80" alt="Botas western"><span>Botas <b>→</b></span></a>
+      <a class="category-card" href="#shop" data-category="Chapéus"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80" alt="Chapéu western"><span>Chapéus <b>→</b></span></a>
+      <a class="category-card" href="#shop" data-category="Acessórios"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80" alt="Acessórios country"><span>Acessórios <b>→</b></span></a>
+    </div></section>
 
-    <section class="featured-section"><h2>Produtos em Destaque</h2><div class="grid" id="featuredGrid"></div></section>
+    <section class="products-section container"><div class="section-heading row-heading"><div><span>02 — CURADORIA STALLION</span><h2>Mais desejados.</h2></div><a href="#shop" data-category="Todos">Ver todos →</a></div><div class="product-grid" id="featuredGrid"></div></section>
 
-    <section class="institutional-section">
-      <div class="institutional-content">
-        <h2>Sobre a Stallion</h2>
-        <p>Somos uma marca de moda contemporânea que acredita que o estilo é uma forma de expressão pessoal. Nossas peças são cuidadosamente selecionadas para oferecer qualidade, conforto e design moderno.</p>
-        <p>Com foco em sustentabilidade e responsabilidade social, transformamos a moda em uma experiência significativa.</p>
-      </div>
-    </section>
-
-    <section class="cta-final-section">
-      <h2>Pronto para renovar seu guarda-roupa?</h2>
-      <p>Explore nossa coleção completa e encontre peças que reflitam sua personalidade.</p>
-      <button class="btn btn-primary" id="btnStartShopping">Começar a comprar</button>
-    </section>
-  </div>
-
-  <main class="container" id="shop" style="display: none;">
-    <section class="catalog-hero"><div><h1 id="catalogTitle">Todos os produtos</h1><p id="catalogSubtitle">Explore nossa seleção completa de peças</p></div></section>
-    <div class="layout">
-      <aside class="sidebar">
-        <h3>Categorias</h3>
-        <div class="filter-list" id="filters"></div>
-        <div class="promo"><strong>Oferta da semana</strong><small>Use o estilo a seu favor. Frete grátis em pedidos acima de R$ 299.</small></div>
-      </aside>
-      <section>
-        <div class="catalog-head"><span class="count" id="count"></span><select class="sort" id="sort"><option value="default">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option></select></div>
-        <div class="grid" id="grid"></div>
-      </section>
-    </div>
+    <section class="collection-banner"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1800&q=85" alt="Coleção Western Essentials"><div class="collection-content"><span class="eyebrow">NOVA COLEÇÃO</span><h2>WESTERN<br>ESSENTIALS</h2><p>Peças inspiradas no universo country com acabamento contemporâneo.</p><a class="btn btn-light" href="#shop" data-category="Todos">Explorar coleção</a></div></section>
+    <section class="manifesto container"><span>03 — A MARCA</span><div><h2>Tradição sem ficar parado no tempo.</h2><p>A STALLION traduz o espírito country em uma linguagem atual: materiais marcantes, silhuetas limpas e peças feitas para acompanhar quem escolhe seu próprio caminho.</p></div></section>
   </main>
 
-  <div class="overlay" id="modalOverlay">
-    <div class="modal" role="dialog" aria-modal="true">
-      <div class="modal-grid">
-        <div class="modal-img"><img id="modalImg" alt="" /></div>
-        <div class="modal-info">
-          <button class="close" id="modalClose">×</button>
-          <div class="category" id="modalCat"></div><h2 id="modalTitle"></h2><p id="modalDesc"></p><div class="modal-price" id="modalPrice"></div>
-          <div class="modal-actions">
-            <button class="primary" id="modalAdd">Adicionar ao carrinho</button>
-            <button class="secondary" id="modalFav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span id="favText">Favoritar</span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <main class="shop-page container" id="shop" hidden><div class="shop-heading"><div><span>STALLION COLLECTION</span><h1 id="catalogTitle">Todos os produtos</h1></div><p id="count"></p></div><div class="shop-toolbar"><div class="filter-chips" id="filters"></div><select id="sort" aria-label="Ordenar produtos"><option value="default">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option></select></div><div class="product-grid catalog-grid" id="grid"></div><div class="empty-state" id="emptyState" hidden><h2>Nenhum produto encontrado.</h2><p>Tente outro termo ou categoria.</p><button class="btn btn-dark" id="clearFilters">Limpar filtros</button></div></main>
 
-  <aside class="drawer" id="drawer">
-    <div class="drawer-head"><h2>Seu carrinho</h2><button class="close" id="drawerClose">×</button></div>
-    <div class="cart-list" id="cartList"></div>
-    <div class="drawer-foot"><div class="total"><span>Total</span><span id="total">R$ 0,00</span></div><button class="checkout" id="checkout" disabled>Finalizar Pedido</button></div>
-  </aside>
+  <div class="modal" id="productModal" hidden><div class="modal-backdrop" data-close-modal></div><div class="modal-card"><button class="modal-close" data-close-modal aria-label="Fechar">×</button><div class="modal-image"><img id="modalImg" alt=""></div><div class="modal-info"><span id="modalCat"></span><h2 id="modalTitle"></h2><p id="modalDesc"></p><strong id="modalPrice"></strong><div class="modal-actions"><button class="btn btn-dark" id="modalAdd">Adicionar ao carrinho</button><button class="btn btn-soft" id="modalFav">♡ Favoritar</button></div></div></div></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho"><div class="drawer-head"><div><span>STALLION</span><h2>Seu carrinho</h2></div><button class="modal-close" id="drawerClose">×</button></div><div class="cart-list" id="cartList"></div><div class="drawer-footer"><div><span>Total</span><strong id="total">R$ 0,00</strong></div><button class="btn btn-dark checkout" id="checkout" disabled>Finalizar pedido</button></div></aside><div class="drawer-backdrop" id="drawerBackdrop"></div><div class="toast" id="toast" role="status"></div>
 
-  <div class="toast" id="toast"></div>
-
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-grid">
-        <div class="footer-col"><h4>Stallion</h4><p>Moda contemporânea que expressa sua personalidade. Qualidade, estilo e autenticidade em cada peça.</p></div>
-        <div class="footer-col"><h4>Navegação</h4><ul><li><a href="#" data-section="home">Início</a></li><li><a href="#" data-category="Masculino">Masculino</a></li><li><a href="#" data-category="Feminino">Feminino</a></li><li><a href="#" data-category="Calçados">Calçados</a></li><li><a href="#" data-category="Promoções">Promoções</a></li></ul></div>
-        <div class="footer-col"><h4>Atendimento</h4><ul><li><a href="#">Fale conosco</a></li><li><a href="#">Central de atendimento</a></li><li><a href="#">Perguntas frequentes</a></li></ul></div>
-        <div class="footer-col"><h4>Informações</h4><ul><li><a href="#">Política de privacidade</a></li><li><a href="#">Termos de uso</a></li><li><a href="#">Política de troca</a></li></ul></div>
-        <div class="footer-col"><h4>Redes Sociais</h4><div class="social-links">
-          <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" stroke="none" fill="currentColor"/><circle cx="18.5" cy="5.5" r="1.5" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a2 2 0 0 1 2-2h3z" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2s9 5 20 5a9.5 9.5 0 0 0-9-5.5c4.75 2.25 7-7 7-7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
-        </div></div>
-      </div>
-      <div class="footer-bottom"><p>&copy; 2026 Stallion. Todos os direitos reservados.</p></div>
-    </div>
-  </footer>
+  <footer><div class="container footer-top"><div><a class="brand footer-brand" href="#home">STALLION</a><p>Country contemporâneo para quem carrega atitude.</p></div><div><h3>Explorar</h3><a href="#shop" data-category="Todos">Coleção</a><a href="#shop" data-category="Masculino">Masculino</a><a href="#shop" data-category="Feminino">Feminino</a></div><div><h3>Atendimento</h3><a href="#">Fale conosco</a><a href="#">Trocas e devoluções</a><a href="#">Perguntas frequentes</a></div><div><h3>Receba novidades</h3><p>Cadastre-se para acompanhar lançamentos e ofertas.</p><form id="newsletter"><input type="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" required><button aria-label="Cadastrar">→</button></form></div></div><div class="container footer-bottom"><span>© 2026 STALLION. Todos os direitos reservados.</span><span>Country Store / Belo Horizonte</span></div></footer>
   <script src="script/script.js"></script>
 </body>
 </html>
