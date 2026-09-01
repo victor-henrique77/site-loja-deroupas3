@@ -44,17 +44,6 @@ const products = [
     desc: "Jaqueta versátil com visual western limpo e acabamento contemporâneo.",
   },
   {
-    id: 5,
-    name: "Chapeu Western Classic",
-    cat: "Chapéus",
-    gender: "Unissex",
-    price: 219.9,
-    old: null,
-    tag: "Novo",
-    img: "img/93f1c3e0-5d6b-4a2e-9f8b-1c2e3d4f5a6b.jpg",
-    desc: "Chapeu essencial para composições autênticas, com caimento moderno.",
-  },
-  {
     id: 6,
     name: "Bota Ranch Leather",
     cat: "Botas",
